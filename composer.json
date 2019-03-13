@@ -1,0 +1,54 @@
+{
+    "name": "surda/search",
+    "description": "Search control for Nette Framework",
+    "keywords": ["nette", "control"],
+    "type": "library",
+    "homepage": "http://surani.cz",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Radek Šuráni",
+            "homepage": "http://surani.cz",
+            "email": "radek@surani.cz"
+        }
+    ],
+    "support": {
+        "email": "radek@surani.cz",
+        "issues": "https://github.com/surda/search/issues"
+    },
+    "require": {
+        "php": ">=7.1",
+        "nette/di": "^2.4",
+        "nette/application": "^2.4",
+        "nette/forms": "^2.4",
+        "latte/latte": "^2.4",
+        "surda/component-helpers": "^1.0"
+    },
+    "require-dev": {
+        "nette/tester": "^2.1",
+        "ninjify/nunjuck": "^0.2",
+        "phpstan/phpstan": "^0.11",
+        "phpstan/phpstan-strict-rules": "^0.11",
+        "phpstan/phpstan-nette": "^0.11",
+        "phpstan/phpstan-deprecation-rules": "^0.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Surda\\Search\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Surda\\Search\\": "tests/cases"
+        }
+    },
+    "scripts": {
+        "tests": [
+            "vendor/bin/tester -s -p php -C tests/cases"
+        ],
+        "phpstan": [
+            "vendor/bin/phpstan analyse -l max -c phpstan.neon src"
+        ]
+    },
+    "minimum-stability": "stable"
+}
