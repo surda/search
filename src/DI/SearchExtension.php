@@ -20,6 +20,7 @@ class SearchExtension extends CompilerExtension
     /** @var array */
     private $templates = [
         'default' => __DIR__ . '/../Templates/bootstrap4.default.latte',
+        'default-sm' => __DIR__ . '/../Templates/bootstrap4.default.sm.latte',
     ];
 
     /**
