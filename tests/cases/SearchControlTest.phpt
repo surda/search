@@ -21,7 +21,7 @@ class SearchControlTest extends TestCase
         $container = (new ContainerFactory())->create();
 
         /** @var SearchFactory $factory */
-        $factory = $container->getService('search.search');
+        $factory = $container->getService('search.controlFactory');
 
         /** @var SearchControl $control */
         $control = $factory->create();

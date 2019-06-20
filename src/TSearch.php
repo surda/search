@@ -21,7 +21,7 @@ trait TSearch
     /**
      * @return SearchControl
      */
-    protected function createComponentSearch(): SearchControl
+    protected function createComponentSearche(): SearchControl
     {
         // Init search component
         $control = $this->searchFactory->create();

@@ -5,11 +5,11 @@ namespace Surda\Search;
 use Nette\Application\UI;
 use Nette\Forms\Controls\SubmitButton;
 use Nette\Utils\ArrayHash;
-use Surda\ComponentHelpers\Traits\Themeable;
+use Surda\UI\Control\ThemeableControls;
 
 class SearchControl extends UI\Control
 {
-    use Themeable;
+    use ThemeableControls;
 
     /** @var string */
     protected $value = '';
@@ -101,10 +101,10 @@ class SearchControl extends UI\Control
         $form->onSuccess[] = [$this, 'formSucceeded'];
 
         $form->addText('search', NULL)
-            ->setAttribute('type', 'search')
-            ->setAttribute('class', 'form-control')
-            ->setAttribute('placeholder', 'Hledej')
-            ->setAttribute('autocomplete', $this->autocomplete)
+            ->setHtmlAttribute('type', 'search')
+            ->setHtmlAttribute('class', 'form-control')
+            ->setHtmlAttribute('placeholder', 'Hledej')
+            ->setHtmlAttribute('autocomplete', $this->autocomplete)
             ->setDefaultValue($this->value)
             ->setRequired('Uveďte hledaný text.');
 

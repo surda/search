@@ -20,7 +20,7 @@ class SearchExtensionTest extends TestCase
         $container = (new ContainerFactory())->create();
 
         /** @var SearchFactory $factory */
-        $factory = $container->getService('search.search');
+        $factory = $container->getService('search.controlFactory');
         Assert::true($factory instanceof SearchFactory);
 
         /** @var SearchFactory $factory */

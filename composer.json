@@ -18,15 +18,13 @@
     },
     "require": {
         "php": ">=7.1",
-        "nette/di": "^2.4",
-        "nette/application": "^2.4",
-        "nette/forms": "^2.4",
-        "latte/latte": "^2.4",
-        "surda/component-helpers": "^1.0"
+        "nette/di": "^3.0",
+        "nette/forms": "^3.0",
+        "surda/themeable-controls": "^1.0"
     },
     "require-dev": {
-        "nette/tester": "^2.1",
-        "ninjify/nunjuck": "^0.2",
+        "nette/tester": "^2.0",
+        "ninjify/nunjuck": "0.3.x-dev",
         "phpstan/phpstan": "^0.11",
         "phpstan/phpstan-strict-rules": "^0.11",
         "phpstan/phpstan-nette": "^0.11",
@@ -48,6 +46,9 @@
         ],
         "phpstan": [
             "vendor/bin/phpstan analyse -l max -c phpstan.neon src"
+        ],
+        "da": [
+            "composer dump-autoload -o"
         ]
     },
     "minimum-stability": "stable"
