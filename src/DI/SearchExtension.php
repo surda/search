@@ -13,7 +13,9 @@ class SearchExtension extends CompilerExtension
     /** @var array */
     private $templates = [
         'default' => __DIR__ . '/../Templates/bootstrap4.default.latte',
+        'default-autofocus' => __DIR__ . '/../Templates/bootstrap4.default.autofocus.latte',
         'default-sm' => __DIR__ . '/../Templates/bootstrap4.default.sm.latte',
+        'default-autofocus-sm' => __DIR__ . '/../Templates/bootstrap4.default.autofocus.sm.latte',
     ];
 
     public function getConfigSchema(): Schema
