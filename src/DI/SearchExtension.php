@@ -7,7 +7,11 @@ use Nette\Schema\Expect;
 use Nette\Schema\Schema;
 use Nette\Utils\AssertionException;
 use Surda\Search\SearchFactory;
+use stdClass;
 
+/**
+ * @property-read stdClass $config
+ */
 class SearchExtension extends CompilerExtension
 {
     /** @var array */
