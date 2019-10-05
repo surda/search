@@ -3,3 +3,7 @@ includes:
 	- vendor/phpstan/phpstan-nette/rules.neon
 	- vendor/phpstan/phpstan-strict-rules/rules.neon
 	- vendor/phpstan/phpstan-deprecation-rules/rules.neon
+parameters:
+    reportUnmatchedIgnoredErrors: false
+    ignoreErrors:
+        - '#Array \(array<callable\(Nette\\Forms\\Form, mixed\): void>\) does not accept array+#'
