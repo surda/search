@@ -14,7 +14,7 @@ use stdClass;
  */
 class SearchExtension extends CompilerExtension
 {
-    /** @var array */
+    /** @var array<string> */
     private $templates = [
         'default' => __DIR__ . '/../Templates/bootstrap4.default.latte',
         'default-autofocus' => __DIR__ . '/../Templates/bootstrap4.default.autofocus.latte',

@@ -5,8 +5,13 @@ namespace Surda\Search;
 use Nette\Application\UI;
 use Nette\Forms\Controls\SubmitButton;
 use Nette\Utils\ArrayHash;
+use Nette\Bridges\ApplicationLatte\Template;
 use Surda\UI\Control\ThemeableControls;
 
+/**
+ * @property-read Template $template
+ * @method onChange(SearchControl $param, string $value)
+ */
 class SearchControl extends UI\Control
 {
     use ThemeableControls;
@@ -20,7 +25,7 @@ class SearchControl extends UI\Control
     /** @var string */
     protected $autocomplete = 'on';
 
-    /** @var array */
+    /** @var array<int> */
     public $onChange;
 
     /**
