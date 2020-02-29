@@ -104,8 +104,10 @@ class SearchControl extends UI\Control
     {
         $form = new UI\Form();
         $form->onSuccess[] = [$this, 'formSucceeded'];
+        $form->setHtmlAttribute('id', 'frm-search-form');
 
         $form->addText('search', NULL)
+            ->setHtmlAttribute('id', 'frm-search-text')
             ->setHtmlAttribute('type', 'search')
             ->setHtmlAttribute('class', 'form-control')
             ->setHtmlAttribute('placeholder', 'Hledej')
@@ -113,9 +115,11 @@ class SearchControl extends UI\Control
             ->setDefaultValue($this->value)
             ->setRequired('Uveďte hledaný text.');
 
-        $form->addSubmit('send', 'Hledej');
+        $form->addSubmit('send', 'Hledej')
+            ->setHtmlAttribute('id', 'frm-search-submit');
 
         $form->addSubmit('reset', 'Vymaž')
+            ->setHtmlAttribute('id', 'frm-search-reset')
             ->setValidationScope([]);
 
         return $form;
