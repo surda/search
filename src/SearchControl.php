@@ -112,8 +112,7 @@ class SearchControl extends UI\Control
             ->setHtmlAttribute('class', 'form-control')
             ->setHtmlAttribute('placeholder', 'Hledej')
             ->setHtmlAttribute('autocomplete', $this->autocomplete)
-            ->setDefaultValue($this->value)
-            ->setRequired('Uveďte hledaný text.');
+            ->setDefaultValue($this->value);
 
         $form->addSubmit('send', 'Hledej')
             ->setHtmlAttribute('id', 'frm-search-submit');
